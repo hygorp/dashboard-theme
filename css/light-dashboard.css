@@ -1,0 +1,46 @@
+:root{
+    /*THEME DARK COLORS VARIABLES*/
+    --lg-primary-bg-color: #FFFFFF;
+    --lg-secondary-bg-color: #F2F2F2;
+    --lg-primary-bt-color: #7367F0;
+    --lg-primary-bt-color-hv: #5F58BF;
+    --lg-secondary-bt-color: #393D53;
+    --lg-secondary-bt-color-hv: #35394E;
+    --lg-primary-font-color: #8A8D9F;
+    --lg-primary-font-color-active: #FCFBFF;
+    --lg-primary-shadow-box: rgba(12, 16, 27, 0.20);
+}
+*{
+    margin: 0; padding: 0;
+}
+
+body{
+    background-color: var(--dk-primary-bg-color);
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "left main";
+    grid-template-columns: 260px 4fr;
+    grid-template-rows: 100vh;
+}
+
+.sidenav{
+    grid-area: left;
+    background-color: var(--dk-secondary-bg-color);
+    box-shadow: 1px 0 3px 0 var(--dk-primary-shadow-box);
+}
+
+.main{
+    grid-area: main;
+    padding: 16px 24px 0 24px;
+}
+
+.top{
+    height: 64px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px 0 var(--dk-primary-shadow-box);
+    background-color: var(--dk-secondary-bg-color);
+}

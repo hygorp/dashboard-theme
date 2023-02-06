@@ -1,0 +1,45 @@
+:root{
+    /*THEME DARK COLORS VARIABLES*/
+    --dk-primary-bg-color: #25293C;
+    --dk-secondary-bg-color: #2E3247;
+    --dk-tertiary-bg-color: #25293C;
+    --dk-primary-bt-color: #7367F0;
+    --dk-primary-bt-color-hv: #5F58BF;
+    --dk-secondary-bt-color: #393D53;
+    --dk-secondary-bt-color-hv: #35394E;
+    --dk-primary-font-color: #8A8D9F;
+    --dk-primary-font-color-active: #FCFBFF;
+    --dk-primary-shadow-box: rgba(12, 16, 27, 0.20);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--dk-secondary-bg-color);
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "main login";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100vh;
+}
+
+.main {
+    grid-area: main;
+    padding: 32px;
+}
+.ads{
+    background-color: var(--dk-tertiary-bg-color);
+    height: 100%;
+    border-radius: 12px;
+}
+
+.login {
+    grid-area: login;
+}
