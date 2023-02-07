@@ -12,10 +12,11 @@
 }
 
 *{
-    margin: 0; padding: 0;
+    margin: 0; padding: 0; outline: none; list-style: none;
 }
 
 body{
+    font-family: 'Nunito', sans-serif;
     background-color: var(--dk-primary-bg-color);
 }
 
@@ -35,6 +36,36 @@ body{
     background-color: var(--dk-secondary-bg-color);
 }
 
+.logo{
+    margin: 24px;
+    cursor: pointer;
+}
+
+.logo_rs{
+    display: none;
+}
+
+.logo_rs img{
+    width: 48px;
+}
+
+.nav{
+
+}
+
+.nav-active{
+    margin: 0 16px 0 16px;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(72.47deg, var(--dk-primary-bt-color), var(--dk-primary-bt-color-hv));
+}
+
+.nav-active li {
+    color: var(--dk-primary-font-color-active);
+    font-weight: bold;
+    padding: 9px;
+}
+
 .main{
     grid-area: main;
     padding: 16px 24px 0 24px;
@@ -46,15 +77,6 @@ body{
     border-radius: 6px;
     box-shadow: 0 1px 3px 0 var(--dk-primary-shadow-box);
     background-color: var(--dk-secondary-bg-color);
-}
-
-.logo{
-	margin: 24px;
-	cursor: pointer;
-}
-
-.logo_rs{
-	display: none;
 }
 
 @media only screen and (max-width: 768px){
@@ -69,7 +91,7 @@ body{
     }
 	
 	.sidenav{
-		padding: 24px 0px 0px 16px;
+		padding: 24px 0 0 16px;
 	}
 	
 	.logo{
