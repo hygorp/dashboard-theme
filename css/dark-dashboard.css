@@ -31,8 +31,8 @@ body{
 
 .sidenav{
     grid-area: left;
+	box-shadow: 1px 0 3px 0 var(--dk-primary-shadow-box);
     background-color: var(--dk-secondary-bg-color);
-    box-shadow: 1px 0 3px 0 var(--dk-primary-shadow-box);
 }
 
 .main{
@@ -48,6 +48,15 @@ body{
     background-color: var(--dk-secondary-bg-color);
 }
 
+.logo{
+	margin: 24px;
+	cursor: pointer;
+}
+
+.logo_rs{
+	display: none;
+}
+
 @media only screen and (max-width: 768px){
     .container{
         display: grid;
@@ -58,4 +67,17 @@ body{
         grid-template-rows: 100vh;
         transition: all 0.5s linear;
     }
+	
+	.sidenav{
+		padding: 24px 0px 0px 16px;
+	}
+	
+	.logo{
+		display: none;
+	}
+	
+	.logo_rs{
+		display: block;
+		cursor: pointer;
+	}
 }
