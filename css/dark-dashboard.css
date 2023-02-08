@@ -54,10 +54,24 @@ body{
 }
 
 .nav-active{
-    margin: 0 16px 0 16px;
+    margin: 0 15px 0 15px;
     height: 40px;
     border-radius: 8px;
+	cursor: pointer;
+	box-shadow: 0 1px 3px 0 var(--dk-primary-shadow-box);
     background: linear-gradient(72.47deg, var(--dk-primary-bt-color), var(--dk-primary-bt-color-hv));
+}
+
+.nav-active:before{
+	content: '\f201';
+    font-family: 'Font Awesome 6 Free';
+    font-size: 22px;
+    font-weight: 900;
+    padding: 8px 10px 0 10px;
+    color: var(--dk-primary-font-color-active);
+    float: left;
+    margin-left: 5px;
+    transition: all 1s;
 }
 
 .nav-active li {
@@ -101,5 +115,9 @@ body{
 	.logo_rs{
 		display: block;
 		cursor: pointer;
+	}
+	
+	.nav-active, .nav-active li{
+		display: none;
 	}
 }
