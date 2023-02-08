@@ -6,8 +6,9 @@
     --dk-primary-bt-color-hv: #5F58BF;
     --dk-secondary-bt-color: #393D53;
     --dk-secondary-bt-color-hv: #35394E;
-    --dk-primary-font-color: #8A8D9F;
+    --dk-primary-font-color: #E4E6f4;
     --dk-primary-font-color-active: #FCFBFF;
+    --dk-primary-font-color-disabled: #707286;
     --dk-primary-shadow-box: rgba(12, 16, 27, 0.20);
 }
 
@@ -50,7 +51,15 @@ body{
 }
 
 .nav{
+    //
+}
 
+.nav-separator{
+    margin: 15px 0 5px 30px;
+    font-weight: 900;
+    font-size: .7em;
+    color: var(--dk-primary-font-color-disabled);
+    text-transform: uppercase;
 }
 
 .nav-active{
@@ -62,22 +71,89 @@ body{
     background: linear-gradient(72.47deg, var(--dk-primary-bt-color), var(--dk-primary-bt-color-hv));
 }
 
-.nav-active:before{
-	content: '\f201';
-    font-family: 'Font Awesome 6 Free';
-    font-size: 22px;
+.nav-active li {
+    font-weight: bold;
+    padding: 9px;
+    color: var(--dk-primary-font-color-active);
+}
+
+.nav-inactive{
+    margin: 0 15px 0 15px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.nav-inactive li{
+    font-weight: bold;
+    padding: 9px;
+    color: var(--dk-primary-font-color-disabled);
+}
+
+.nav-inactive:before{
+    content: '\f0e0';
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-size: 18px;
     font-weight: 900;
-    padding: 8px 10px 0 10px;
+    padding: 10px 10px 0 10px;
+    color: var(--dk-primary-font-color-disabled);
+    float: left;
+    margin-left: 5px;
+    transition: all 1s;
+}
+
+.nav-inactive:hover{
+    transition: all 0.5s linear;
+    color: var(--dk-primary-font-color-active);
+    background-color: var(--dk-secondary-bt-color-hv);
+}
+
+.panel-item:before{
+    content: '\f201';
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px 10px 0 10px;
     color: var(--dk-primary-font-color-active);
     float: left;
     margin-left: 5px;
     transition: all 1s;
 }
 
-.nav-active li {
-    color: var(--dk-primary-font-color-active);
-    font-weight: bold;
-    padding: 9px;
+.email-item:before{
+    content: '\f0e0';
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px 10px 0 10px;
+    color: var(--dk-primary-font-color-disabled);
+    float: left;
+    margin-left: 5px;
+    transition: all 1s;
+}
+
+.chat-item:before{
+    content: '\f075';
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px 10px 0 10px;
+    color: var(--dk-primary-font-color-disabled);
+    float: left;
+    margin-left: 5px;
+    transition: all 1s;
+}
+
+.calendar-item:before{
+    content: '\f073';
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px 10px 0 10px;
+    color: var(--dk-primary-font-color-disabled);
+    float: left;
+    margin-left: 5px;
+    transition: all 1s;
 }
 
 .main{
@@ -117,7 +193,7 @@ body{
 		cursor: pointer;
 	}
 	
-	.nav-active, .nav-active li{
+	.nav-active, .nav-active li, .nav-inactive, .nav-inactive li, .nav-separator{
 		display: none;
 	}
 }
